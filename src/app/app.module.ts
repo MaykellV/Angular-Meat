@@ -16,6 +16,7 @@ import { MenuComponent } from 'app/restaurant-detail/menu/menu.component';
 import { ShoppingCartComponent } from 'app/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from 'app/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from 'app/restaurant-detail/reviews/reviews.component';
+import { ShoppingCartService } from 'app/restaurant-detail/shopping-cart/shopping-cart.service';
 
 
 
@@ -39,7 +40,8 @@ import { ReviewsComponent } from 'app/restaurant-detail/reviews/reviews.componen
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RestaurantsService
+    RestaurantsService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
