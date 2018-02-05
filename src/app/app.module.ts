@@ -41,7 +41,8 @@ import { ShoppingCartService } from 'app/restaurant-detail/shopping-cart/shoppin
   ],
   providers: [
     RestaurantsService,
-    ShoppingCartService
+    ShoppingCartService,
+    {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
 })
