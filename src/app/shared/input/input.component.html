@@ -1,0 +1,13 @@
+<div class="form-group" [class.has-success]="input.valid && (input.dirty || input.touched)" [class.has-error]="!iptAddress.valid && (iptAddress.dirty || iptAddress.touched)">
+  <label class="control-label sr-only" for="inputSuccess">
+    <i class="fa fa-check"></i>{{label}}</label>
+  
+    <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="Endereço">
+      <input name="address" ngModel required minlength="5" autocomplete="off">
+    </mt-input-container>
+  
+    <span class="help-block" *ngIf="input.valid && (input.dirty || input.touched)">
+    <i class="fa fa-check"></i> OK</span>
+  <span class="help-block" *ngIf="!input.valid && (input.dirty || input.touched)">
+    <i class="fa fa-remove"></i>{{errorMessage}}</span>
+</div>
