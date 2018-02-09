@@ -1,35 +1,57 @@
 ngform -> para validar o form
 
--> para utilizarmos o templete forms È necessario a diretiva ngModel e o atributo name
+-> para utilizarmos o templete forms √© necessario a diretiva ngModel e o atributo name
 
-Form rasatreia os campos com o NGMODEL de forma que se os campos com NGMODEL forem invalidos o form tambÈm ser· invalÌdo.
+Form rasatreia os campos com o NGMODEL de forma que se os campos com NGMODEL forem invalidos o form tambÔøΩm serÔøΩ invalÔøΩdo.
 
 NGFORM nos permite mudar as propriedades de um elemento no input por meio do [(ngModel)]. "TWO-WAY BINDING" -> (input e output) ||||| "ONE-WAY BINDING" -> (output)
 
-#myForm="ngForm" nos permite acessar as propriedades do formul·rio.
+#myForm="ngForm" nos permite acessar as propriedades do formulario.
 
-Ent„o podemos por exemplo: habilitar ou n„o um bot„o baseando-se na validade do form.
-
-
-
+Entao podemos por exemplo: habilitar ou nÔøΩo um botÔøΩo baseando-se na validade do form.
 
 Gerando componente: ng g c order --spec=false
 
-
-VALIDA«√O DE FORMULARIOS
+VALIDACAO DE FORMULARIOS
 
 NGMODEL: ESTADOS DOS CAMPOS
 
 VALID|INVALID
 
-PRISTINE / DIRTY -> O campo se encontra no primeiro estado, assim que o usu·rio digita ele passa a ser DIRTY
+PRISTINE / DIRTY -> O campo se encontra no primeiro estado, assim que o usuÔøΩrio digita ele passa a ser DIRTY
 
-TOUCHED -> quando o usu·rio entra no campo.
+TOUCHED -> quando o usuÔøΩrio entra no campo.
 
 Para saber o estado do compo precisamos de utilizar o *ngIf="ipt.invalid"
 
 
 VALIDATORS
+
+Val√≠damos os campos de um formulario criando um componente chamado mt-input-container e um input como filho dele. 
+apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as valida√ß√µes.
+
+
+
+VALIDACAO COM EXPRE√á√ïES REGULARES
+
+Para validarmos com EXPRE√á√ïES regulares devemos usar o atributo pattern="" no input que queremos validar
+
+Express√µes regulares usadas na valida√ß√£o de formul√°rios
+
+### Email Regex
+
+`/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i`
+
+### Number Regex
+
+`/^[0-9]*$/`
+
+
+COMPONENTE PARA Radio - ControlValueAccess
+
+Um componente foi criado para representar o radio, atrav√©s de um array controlamos os elementos do radio e pagamos o value digitado pelo evento de click
+
+
 
 
 

@@ -20,6 +20,8 @@ import { ShoppingCartService } from 'app/restaurant-detail/shopping-cart/shoppin
 import { OrderComponent } from './order/order.component';
 import { FormsModule } from '@angular/forms';
 import { InputComponent } from 'app/shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component';
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { InputComponent } from 'app/shared/input/input.component';
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
-    InputComponent
+    InputComponent,
+    RadioComponent
     
   ],
   imports: [
