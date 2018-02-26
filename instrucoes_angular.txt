@@ -53,6 +53,18 @@ Um componente foi criado para representar o radio, através de um array controla
 evento de click
 
 
+REACTIVE forms
+
+O form é representado por um form group userForm: FormGroup (interface)
+
+declaramos um private fb: FormBuider para inserir os campos de nosso form.
+
+é equivalente ao templete-form
+
+Dá para validar valores de grupos, com isso conseguimos validar os valores entre os componentes.
+
+
+
 
 
 
