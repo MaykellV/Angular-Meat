@@ -8,20 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
-import { RestaurantsService } from './restaurants/restaurants.service';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { MenuComponent } from 'app/restaurant-detail/menu/menu.component';
 import { ShoppingCartComponent } from 'app/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from 'app/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from 'app/restaurant-detail/reviews/reviews.component';
-import { ShoppingCartService } from 'app/restaurant-detail/shopping-cart/shopping-cart.service';
-import { OrderComponent } from './order/order.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { OrderItemsComponent } from './order/order-items/order-items.component';
-import { OrderService } from './order/order.service';
-import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -35,9 +30,6 @@ import { SharedModule } from './shared/shared.module';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent,
-    OrderItemsComponent,
-    DeliveryCostsComponent,
     OrderSummaryComponent,
   ],
   imports: [
@@ -46,12 +38,10 @@ import { SharedModule } from './shared/shared.module';
     RouterModule.forRoot(ROUTES),
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [
-    RestaurantsService,
-    ShoppingCartService,
-    OrderService,
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
