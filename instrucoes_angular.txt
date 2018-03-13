@@ -12,7 +12,9 @@ Entao podemos por exemplo: habilitar ou n�o um bot�o baseando-se na validade
 
 Gerando componente: ng g c order --spec=false
 
+------------------------------------
 VALIDACAO DE FORMULARIOS
+------------------------------------
 
 NGMODEL: ESTADOS DOS CAMPOS
 
@@ -24,16 +26,16 @@ TOUCHED -> quando o usu�rio entra no campo.
 
 Para saber o estado do compo precisamos de utilizar o *ngIf="ipt.invalid"
 
-
+-----------------------------
 VALIDATORS
-
+-----------------------------
 Valídamos os campos de um formulario criando um componente chamado mt-input-container e um input como filho dele. 
 apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
 
 
-
+--------------------------------------------
 VALIDACAO COM EXPREÇÕES REGULARES
-
+---------------------------------------------
 Para validarmos com EXPREÇÕES regulares devemos usar o atributo pattern="" no input que queremos validar
 
 Expressões regulares usadas na validação de formulários
@@ -46,14 +48,15 @@ Expressões regulares usadas na validação de formulários
 
 `/^[0-9]*$/`
 
-
+----------------------------------------------
 COMPONENTE PARA Radio - ControlValueAccess
-
+----------------------------------------------
 Um componente foi criado para representar o radio, através de um array controlamos os elementos do radio e pagamos o value digitado pelo
 evento de click
 
-
+---------=-----------
 REACTIVE forms
+---------=------------
 
 O form é representado por um form group userForm: FormGroup (interface)
 
@@ -62,6 +65,30 @@ declaramos um private fb: FormBuider para inserir os campos de nosso form.
 é equivalente ao templete-form
 
 Dá para validar valores de grupos, com isso conseguimos validar os valores entre os componentes.
+
+----------------------------------------
+    LAZY LOAD  ou Carregamento tardio
+----------------------------------------
+
+Com Lazy load conseguimos carregar a página somente no momento da requisição a ela, por exemplo, em funcionalidades que dependem de permissões especiais. Não a necessidade
+carregala antecipadamente.
+
+Carregar um determinado modulo somente por necessidade. Sem LAZY LOAD a aplicação carrega todos os componentes. Em aplicações maiores isso pode acarretar em lentidão em nossa SPA.
+
+Por exemplo o componente que representa o sobre da nossa aplicação é um bom concorrente para virar um modulo. Pois, nem todo mundo que acessa a aplicação ira para o sobre.
+
+------------------------------------------------------------------
+BOAS PRATICAS - MODULARIZAÇÃO  DE COMPONENTES COMPORTATILHAVEIS 
+------------------------------------------------------------------
+input - radio - rating - entre outros components
+
+
+
+
+
+
+
+
 
 
 
