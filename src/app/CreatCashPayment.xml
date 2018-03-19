@@ -1,0 +1,36 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:safetypay:contract:mws:direct" xmlns:urn1="urn:safetypay:schema:base">
+   <soap:Header/>
+   <soap:Body>
+      <urn:CashPaymentRequest>
+         <!--Optional:-->
+         <urn1:RequestDateTime>2018-03-13T14:24:59</urn1:RequestDateTime>
+         <!--Optional:-->
+         <urn:ApiKey>4165670f0d64615b7bccc7eaabd78c07</urn:ApiKey>
+         <!--Optional:-->
+         <urn:Signature>09488b4362c47370878d3241f28dd602e254d0b5fb9f41113748896371e9fbd4</urn:Signature>
+         <!--Optional:-->
+         <urn:CountryID>BRA</urn:CountryID>
+         <!--Optional:-->
+         <urn:Amount CurrencyID="BRL">5.00</urn:Amount>
+         <!--Optional:-->
+         <urn:MerchantSalesID>Test_Integracoes</urn:MerchantSalesID>
+         <!--Optional:-->
+         <urn:TrackingCode></urn:TrackingCode>
+         <!--Optional:-->
+         <urn:ExpirationTime>120</urn:ExpirationTime>
+         <!--Optional:-->
+         <urn:Language>PT</urn:Language>
+         <urn:SendEmailToShopper>0</urn:SendEmailToShopper>
+         <!--Optional:-->
+         <urn1:CustomerInformation>
+            <!--Zero or more repetitions:-->
+            <urn1:CustomerField Key="CPF" Value="31758130890"/>
+            <urn1:CustomerField Key="CustomerEmail" Value="mvferreira@safetypay.com"/>
+         </urn1:CustomerInformation>
+         <!--Optional:-->
+         <urn:CustomMerchantName></urn:CustomMerchantName>
+         <!--Optional:-->
+         <urn:ApplicationID>1</urn:ApplicationID>
+      </urn:CashPaymentRequest>
+   </soap:Body>
+</soap:Envelope>
