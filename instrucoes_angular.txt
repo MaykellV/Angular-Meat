@@ -2,35 +2,35 @@ ngform -> para validar o form
 
 -> para utilizarmos o templete forms é necessario a diretiva ngModel e o atributo name
 
-Form rasatreia os campos com o NGMODEL de forma que se os campos com NGMODEL forem invalidos o form tamb�m ser� inval�do.
+Form rasatreia os campos com o NGMODEL de forma que se os campos com NGMODEL forem invalidos o form também sera invalido.
 
 NGFORM nos permite mudar as propriedades de um elemento no input por meio do [(ngModel)]. "TWO-WAY BINDING" -> (input e output) ||||| "ONE-WAY BINDING" -> (output)
 
 #myForm="ngForm" nos permite acessar as propriedades do formulario.
 
-Entao podemos por exemplo: habilitar ou n�o um bot�o baseando-se na validade do form.
+Entao podemos por exemplo: habilitar ou não um botão baseando-se na validade do form.
 
 Gerando componente: ng g c order --spec=false
 
 ------------------------------------
-VALIDACAO DE FORMULARIOS
+VALIDACAO DE FORMULARIOS COM NGMODEL
 ------------------------------------
 
 NGMODEL: ESTADOS DOS CAMPOS
 
 VALID|INVALID
 
-PRISTINE / DIRTY -> O campo se encontra no primeiro estado, assim que o usu�rio digita ele passa a ser DIRTY
+PRISTINE / DIRTY -> O campo se encontra no primeiro estado, assim que o usuário digita ele passa a ser DIRTY
 
-TOUCHED -> quando o usu�rio entra no campo.
+TOUCHED -> quando o usuário entra no campo.
 
 Para saber o estado do compo precisamos de utilizar o *ngIf="ipt.invalid"
 
 -----------------------------
 VALIDATORS
 -----------------------------
-Valídamos os campos de um formulario criando um componente chamado mt-input-container e um input como filho dele. 
-apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
+Valídamos os campos de um formulario criando um componente chamado mt-input-container que tem o input como filho dele.
+Apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
 
 
 --------------------------------------------
@@ -81,6 +81,23 @@ Por exemplo o componente que representa o sobre da nossa aplicação é um bom c
 BOAS PRATICAS - MODULARIZAÇÃO  DE COMPONENTES COMPORTATILHAVEIS 
 ------------------------------------------------------------------
 input - radio - rating - entre outros components
+
+
+---------------------------------------------------------------------
+CORE MODULES
+---------------------------------------------------------------------
+Sempre que colocamos um serviço na nossa lista de providers, nós estamos criando uma instancia daquele serviço e disponibilizando para os componente e para seus filhos.
+A injeção de dependencia é feita de forma Hierarquica.
+
+O ponto mais alto da herança fica em um ponto que é chamado de módulo raiz. "app.module.js".
+
+Quando criamos um Modulo separado, como o orderModule os providers declarados dentro deste moludo não será visivel para o restante dos modulos da aplicação. 
+
+Neste ponto entra o CORE Modulo, ele tem como ideia tratar este problema, ou seja, nós teremos um modulo separado onde temos todos os providers da aplicação e esse modulo 
+só é importado no modulo raiz, evitamos então ter uma instancia a mais de nossa injeção de dependencia.
+
+
+
 
 
 
