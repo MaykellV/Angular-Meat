@@ -12,9 +12,15 @@ Entao podemos por exemplo: habilitar ou não um botão baseando-se na validade d
 
 Gerando componente: ng g c order --spec=false
 
+<<<<<<< HEAD
 ------------------------------------
 VALIDACAO DE FORMULARIOS COM NGMODEL
 ------------------------------------
+=======
+--------------------------
+VALIDACAO DE FORMULARIOS |
+--------------------------
+>>>>>>> f906756331b0a5eda77d92afc2b5fb4ae18192ae
 
 NGMODEL: ESTADOS DOS CAMPOS
 
@@ -26,16 +32,24 @@ TOUCHED -> quando o usuário entra no campo.
 
 Para saber o estado do compo precisamos de utilizar o *ngIf="ipt.invalid"
 
+<<<<<<< HEAD
 -----------------------------
 VALIDATORS
 -----------------------------
 Valídamos os campos de um formulario criando um componente chamado mt-input-container que tem o input como filho dele.
 Apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
+=======
+------------
+VALIDATORS |
+------------
+Valídamos os campos de um formulario criando um componente chamado mt-input-container e um input como filho dele. 
+apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
+>>>>>>> f906756331b0a5eda77d92afc2b5fb4ae18192ae
 
 
---------------------------------------------
-VALIDACAO COM EXPREÇÕES REGULARES
----------------------------------------------
+-----------------------------------
+VALIDACAO COM EXPREÇÕES REGULARES |
+-----------------------------------
 Para validarmos com EXPREÇÕES regulares devemos usar o atributo pattern="" no input que queremos validar
 
 Expressões regulares usadas na validação de formulários
@@ -48,15 +62,15 @@ Expressões regulares usadas na validação de formulários
 
 `/^[0-9]*$/`
 
-----------------------------------------------
-COMPONENTE PARA Radio - ControlValueAccess
-----------------------------------------------
+--------------------------------------------
+COMPONENTE PARA Radio - ControlValueAccess |
+--------------------------------------------
 Um componente foi criado para representar o radio, através de um array controlamos os elementos do radio e pagamos o value digitado pelo
 evento de click
 
----------=-----------
-REACTIVE forms
----------=------------
+---------=------
+REACTIVE forms |
+---------=------
 
 O form é representado por um form group userForm: FormGroup (interface)
 
@@ -66,9 +80,9 @@ declaramos um private fb: FormBuider para inserir os campos de nosso form.
 
 Dá para validar valores de grupos, com isso conseguimos validar os valores entre os componentes.
 
-----------------------------------------
-    LAZY LOAD  ou Carregamento tardio
-----------------------------------------
+-----------------------------------
+LAZY LOAD  ou Carregamento tardio |
+-----------------------------------
 
 Com Lazy load conseguimos carregar a página somente no momento da requisição a ela, por exemplo, em funcionalidades que dependem de permissões especiais. Não a necessidade
 carregala antecipadamente.
@@ -77,10 +91,11 @@ Carregar um determinado modulo somente por necessidade. Sem LAZY LOAD a aplicaç
 
 Por exemplo o componente que representa o sobre da nossa aplicação é um bom concorrente para virar um modulo. Pois, nem todo mundo que acessa a aplicação ira para o sobre.
 
-------------------------------------------------------------------
-BOAS PRATICAS - MODULARIZAÇÃO  DE COMPONENTES COMPORTATILHAVEIS 
-------------------------------------------------------------------
+-----------------------------------------------------------------
+BOAS PRATICAS - MODULARIZAÇÃO  DE COMPONENTES COMPORTATILHAVEIS |
+-----------------------------------------------------------------
 input - radio - rating - entre outros components
+
 
 
 ---------------------------------------------------------------------
@@ -95,6 +110,46 @@ Quando criamos um Modulo separado, como o orderModule os providers declarados de
 
 Neste ponto entra o CORE Modulo, ele tem como ideia tratar este problema, ou seja, nós teremos um modulo separado onde temos todos os providers da aplicação e esse modulo 
 só é importado no modulo raiz, evitamos então ter uma instancia a mais de nossa injeção de dependencia.
+
+------------------------------
+Modulo - ModuleWithProviders |
+------------------------------
+Nos permite importar o modulo de forma diferente, com providers ou sem providers.
+
+
+-----------------------------
+PRÉ-CARREGAMENTO DE MODULOS |
+-----------------------------
+Com o PreloadAllModules nós conseguimos carregar os modulos configurados para carregamento tardio em modo background,
+sem o PreloadAllModules podemos ter lentidão na hora de carregar modulos tardios. já com ele tudo será carregado no background
+melhorando a esperiencia da aplicação.
+
+
+-----------------------
+ANIMAÇÕES COM ANGULAR |
+-----------------------
+As animações com angular nos tras uma ideia de movimento a aplicação. Ela está disponível somente para o firefox e google chrome. 
+Para os navegadores que não suporta temos que importar o polifill.
+
+1º
+importando o modulo de animações.
+npm install --save @angular/animations@4.0.0
+
+2º
+importando o polifill para que a aplicação rode em qualquer navegador.
+npm install --save web-animations-js
+
+3º
+configurar o nosso polifill
+
+4º 
+configurar o nosso animations module no nosso modulo principal.
+
+
+---------------------
+DEFINDO UM SNACKBAR |
+---------------------
+
 
 
 
