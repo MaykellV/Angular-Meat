@@ -12,15 +12,11 @@ Entao podemos por exemplo: habilitar ou não um botão baseando-se na validade d
 
 Gerando componente: ng g c order --spec=false
 
-<<<<<<< HEAD
+
 ------------------------------------
 VALIDACAO DE FORMULARIOS COM NGMODEL
 ------------------------------------
-=======
---------------------------
-VALIDACAO DE FORMULARIOS |
---------------------------
->>>>>>> f906756331b0a5eda77d92afc2b5fb4ae18192ae
+
 
 NGMODEL: ESTADOS DOS CAMPOS
 
@@ -32,19 +28,12 @@ TOUCHED -> quando o usuário entra no campo.
 
 Para saber o estado do compo precisamos de utilizar o *ngIf="ipt.invalid"
 
-<<<<<<< HEAD
------------------------------
-VALIDATORS
------------------------------
-Valídamos os campos de um formulario criando um componente chamado mt-input-container que tem o input como filho dele.
-Apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
-=======
 ------------
 VALIDATORS |
 ------------
 Valídamos os campos de um formulario criando um componente chamado mt-input-container e um input como filho dele. 
 apartir da classe has-error e has-success do bootstrap damos uma aparencia melhor para as validações.
->>>>>>> f906756331b0a5eda77d92afc2b5fb4ae18192ae
+
 
 
 -----------------------------------
@@ -149,29 +138,6 @@ configurar o nosso animations module no nosso modulo principal.
 ---------------------
 DEFINDO UM SNACKBAR |
 ---------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
