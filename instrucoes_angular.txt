@@ -135,9 +135,45 @@ configurar o nosso polifill
 configurar o nosso animations module no nosso modulo principal.
 
 
----------------------
-DEFINDO UM SNACKBAR |
----------------------
+-------------------------------------------------------------
+IMPLEMENTANDO UM SERVIÇO DE NOTIFICAÇÕES PARA NOSSA SNACKBAR |
+-------------------------------------------------------------
+Criamos um serviço que emite um evento para a aplicação:
+
+notify(message: string) {
+        this.notifier.emit(message)
+    }
+
+assim ele ficara disponivel para outros pontos da aplicação...
+
+Para pegar este evento:
+
+precisamos injetar este serviço no componente onde queremos importa-los.
+
+Vamos adiciona-lo em dois pontos.
+
+No shopping-cart.service.ts temos dois pontos legais onde podemos chama-lo, ao inserir itens e remover itens do carrinho.
+
+this.notificationService.notify(`Você adicionou o item ${item.name}`)
+
+----------------------------------------------
+IMPLEMENTANDO UM UM TIMER PARA NOSSA SNACKBAR |
+----------------------------------------------
+Quando ativamos uma snackbar para hiden ela não desaparece mais. Para que ela desapareça utilizamos um operador chamado timer do Observable.
+
+Observable.timer(3000).subscribe(timer => this.snackVisibility = 'hidden')
+
+
+----------------------------------------------
+ANIMAÇÕES COM KEYFRAME                       |
+----------------------------------------------
+MUDAR A ANIMAÇÕES EM PONTOS, EM MARCOS.
+        
+
+
+
+
+
 
 
 

@@ -43,7 +43,6 @@ export class OrderComponent implements OnInit {
   }
 
   static equalsTo(group: AbstractControl): {[key: string]: boolean} {
-    console.log("sad");
     const email = group.get('email');
     const emailConfirmation = group.get('emailConfirmation');
 
@@ -86,7 +85,5 @@ export class OrderComponent implements OnInit {
       this.router.navigate(['/order-summary'])
       this.orderService.clear()
     })
-    console.log(order)
   }
-
 }
